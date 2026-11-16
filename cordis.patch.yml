@@ -1,0 +1,17 @@
+- insert:
+    - id: lang-corpus
+      name: dsh-lang-corpus
+      config:
+        # 语料目录：~/.dsh/lang-corpus（corpus.jsonl + state.json）
+        dir: '~/.dsh/lang-corpus'
+        # 定时采集间隔（小时）
+        intervalHours: 24
+        # 每天定时入池上限
+        dailyCap: 80
+        # 按需采集的溢出额度：定时配额用完后，仍允许为 lang_hint 再收这么多条，
+        # 否则一天晚些时候工具就永远拿不到东西
+        demandBonus: 20
+        # 过期清理（天）
+        keepDays: 120
+        sources:
+          - bilibili
