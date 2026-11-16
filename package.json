@@ -1,0 +1,51 @@
+{
+  "name": "dsh-lang-corpus",
+  "version": "0.1.0",
+  "description": "语言语料插件：定时采集真人原句进独立语料库，按基调取 2-3 条作参照。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "corpus",
+    "language",
+    "tone"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bailu974/deepseek-dsh-lang-corpus.git"
+  },
+  "homepage": "https://github.com/bailu974/deepseek-dsh-lang-corpus#readme",
+  "bugs": {
+    "url": "https://github.com/bailu974/deepseek-dsh-lang-corpus/issues"
+  },
+  "meta": {
+    "title": "语言语料",
+    "description": "采集层定时抓真人原句进独立语料库；检索层按基调取 2-3 条参照。"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
